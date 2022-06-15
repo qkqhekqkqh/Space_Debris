@@ -1,0 +1,22 @@
+{
+  "name": "Space Debris",
+  "description": "Blacklist Management for Quasarzone.co.kr\nMade by Mamette from Quasarzone",
+  "version": "0.6.9",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./contentScripts/script.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": ["storage", 
+    "activeTab", 
+    "scripting",
+    "tabs"
+  ]
+}
